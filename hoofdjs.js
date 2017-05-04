@@ -1,51 +1,60 @@
-/* Afbeelding top laten veranderen */
+// Slideshow
+var slides = document.querySelectorAll('#slides .slide');
+var currentSlide = 0;
+var slideInterval = setInterval(nextSlide,8000);
 
-/* Eerste foto init */
-var slideIndex = 1;
-showDivs(slideIndex);
-
-/* kijken welke knop gedrukt */
-function plusDivs(n) {
-    showDivs(slideIndex += n);
-    /* Resetten van de timer als je op een knop hebt gedrukt */
-    clearTimeout(timer);
-    timer = setTimeout(carousel, 15000);
+function nextSlide() {
+    slides[currentSlide].className = 'slide';
+    currentSlide = (currentSlide+1)%slides.length;
+    slides[currentSlide].className = 'slide showing';
 }
+//Slideshow
 
-/* kijken welke foto op display */
-function showDivs(n) {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    /* Als einde bereikt is terug naar de eerste */
-    if (n > x.length) {slideIndex = 1}
-    /* Als n 0 is dan geven we de lengte mee aan de slideIndex (gaat naar laatste foto) */
-    if (n < 1) {slideIndex = x.length} ;
-    /* iedere foto gaan we niet gaan displayen */
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
+//nav
+//Voor de padding in te stellen als je de pagina start.
+$(document).ready(function(){
+    if($(window).width() < 767 || $(window).width === 767){
+        document.getElementById("navbar").style.paddingLeft = "0px";
     }
-    /* De foto die we willen gaan we displayen. */
-    x[slideIndex-1].style.display = "block";
-}
-
-/* Afbeelding top laten veranderen */
-
-/* Auto laten bewegen van de fotos */
-
-var slideIndex = 0;
-var timer = null;
-carousel();
-
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
+});
+//als je het scherm aanpast in grootte dan bij een bepaalde afstand de css
+//aanpassen.
+$( window ).resize(function(){
+    if($(window).width() < 767 || $(window).width === 767){
+        document.getElementById("navbar").style.paddingLeft = "0px";
     }
-    slideIndex++;
-    if (slideIndex > x.length) {slideIndex = 1}
-    x[slideIndex-1].style.display = "block";
-    timer = setTimeout(carousel, 15000); // Change image every 15 seconds
-}
+    else{
+        document.getElementById("navbar").style.paddingLeft = "140px";
+    }
+});
 
-/* Auto laten bewegen van de fotos */
+//nav
+
+
+////voor de afstand te verkijgen op het starten van de site.
+//$(document).ready(function(){
+//  var img = document.getElementsByClassName('test');
+//
+//    for(var foto of img){
+//
+//      var hoogte = foto.clientHeight;
+//
+//      var element = document.getElementsByClassName('slideheight');
+//      element.style.height = hoogte + "px";
+//      console.log(element.style.height);
+//    }
+//});
+//
+//// Krijg grootte van de fotos eenmaal als het scherm verkleind.
+//$( window ).resize(function(){
+//  var img = document.getElementsByClassName('test');
+//
+//  for(var foto of img){
+//
+//    var hoogte = foto.clientHeight;
+//
+//    var element = document.getElementsByClassName('slideheight');
+//    element.style.height = hoogte + 10 + "px";
+//    console.log(element.style.height);
+//  }
+//});

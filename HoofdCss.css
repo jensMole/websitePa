@@ -3,103 +3,146 @@
     color: black;
 }
 .active a{
-	color: black !important;
+    color: black !important;
 }
 .navbar-default li{
-	list-style-type: none;
-	font-size: 130%;
+    list-style-type: none;
+    font-size: 130%;
 }
 .navbar-default{
-	background-color: #eee;
+    background-color: white;
 }
 .navbar .navbar-nav {
   display: inline-block;
   float: none;
   vertical-align: top;
 }
-.navbar .navbar-collapse {
-  text-align: center;
-}
+
 .navbar{
-  padding: 20px;
+  padding: 10px;
+  margin-bottom: 0px;
 }
-.active a{
-	color:  #3300cc !important;
-  background-color: #eee !important;
+
+.navbar-collapse {
+  padding-left: 140px;
 }
 
 .icon{
   padding: 23px 28px 24px 0;
-  float: center;
   margin: -10px 15px 0 0;
+}
+
+#logo{
+    position: absolute;
+    left: 2%;
+    top: 7px;
+    display: block;
 }
 /*Navigatie menu*/
 
-/* afbeeldingen */
-.mySlides{
-  max-width: 100%;
-  max-height: 500px;
-  top: 80px;
-  position: absolute;
-  z-index:-1
-}
- /* Verplaatsen van foto's */
-.move{
-  right:0;
-  -webkit-animation: SchuifIn .75s 1 forwards;
-  animation: SchuifIn .75s 1 forwards;
+
+/*slideshow*/
+#slides {
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
 }
 
-@-webkit-keyframes SchuifIn {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-@keyframes SchuifIn {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-/* Verplaatsen van foto's */
-
-/* Buttons */
-.button-left{
-  top: 300px;
-  position: absolute;
-  width: auto;
-  font-size: 200%;
-  color: red;
-  padding: 16px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+.slideheight{
+    max-width: 100%;
+    max-height: 450px;
 }
 
-.button-right{
-  top: 300px;
-  position: absolute;
-  width: auto;
-  font-size: 200%;
-  right: 0px;
-  color: red;
-  padding: 16px;
-  transition: 0.6s ease;
-  border-radius: 3px 0 0 3px;
+.slide {
+    position:relative;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
 }
 
-#fotos a {
-  color: white;
-  cursor: pointer;
+#slide1, #slide2{
+    position: absolute;
+    top: 0px;
 }
 
-#fotos a:hover {
-  text-decoration: none;
-  background-color: rgba(0,0,0,0.8);
+.showing {
+    opacity: 1;
+    z-index: 2;
 }
-/* Buttons */
-/* Afbeeldingen */
+
+#fotobackground{
+  background-color: #F5F5F5;
+  text-align: center;
+}
+/*slideshow*/
+
+/*tekst intro*/
+/*rode beginletters*/
+.rodeLetters{
+  text-align: center;
+}
+
+.rodeLetters span{
+  color:red;
+}
+
+/*tekst in het midden plaatsen*/
+#info{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#tekst{
+  background-color: white;
+}
+
+.tekst{
+  font-size: 125%;
+}
+/*tekst intro*/
+
+
+
+
+/*Footer*/
+#footkleur{
+  background-color:#074b81;
+  padding: 50px;
+}
+
+.footTitel{
+  font-size: 28px;
+  /* 28px */
+  line-height: 1.4642745;
+  /* 41px */
+  font-weight: 300;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.tekstFoot{
+  color: #bdc3c7;
+}
+
+.linkenfoot{
+  list-style-type: none;
+}
+
+.linkenfoot a {
+  color: #bdc3c7;
+}
+
+.siteMap{
+    
+}
+/*Footer*/
