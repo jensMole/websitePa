@@ -22,6 +22,7 @@
 
 .navbar{
   padding: 10px;
+   margin-bottom: 0px;
 }
 
 .navbar-collapse {
@@ -111,6 +112,39 @@
 /*tekst intro*/
 
 
+/* Projecten */
+#Foto1{
+    margin-left: 150px;
+    box-shadow: 10px 10px 5px grey;
+}
+
+#Foto2{
+    box-shadow: -10px 10px 5px grey;
+}
+
+#Foto3{
+    margin-left: 150px;
+    box-shadow: 10px 10px 5px grey;
+}
+
+.Projects{
+    max-height: 555px;
+}
+
+.project1Tekst{
+    padding-top: 200px;
+    margin-right: 60px;
+}
+
+.project2Tekst{
+    padding-top: 200px;
+    margin-left: 60px;
+}
+
+#EndFoto{
+    margin-bottom: 15px;
+}
+/* Projecten */
 
 
 /*Footer*/
