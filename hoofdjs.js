@@ -4,9 +4,11 @@ var currentSlide = 0;
 var slideInterval = setInterval(nextSlide,8000);
 
 function nextSlide() {
-    slides[currentSlide].className = 'slide';
-    currentSlide = (currentSlide+1)%slides.length;
-    slides[currentSlide].className = 'slide showing';
+    if(!($(window).width() < 767 || $(window).width === 767)){
+        slides[currentSlide].className = 'slide';
+        currentSlide = (currentSlide+1)%slides.length;
+        slides[currentSlide].className = 'slide showing';
+    }
 }
 //Slideshow
 
@@ -15,7 +17,7 @@ function nextSlide() {
 $(document).ready(function(){
     if($(window).width() < 767 || $(window).width === 767){
         document.getElementById("navbar").style.paddingLeft = "0px";
-    }
+      }
 });
 //als je het scherm aanpast in grootte dan bij een bepaalde afstand de css
 //aanpassen.

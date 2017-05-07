@@ -16,26 +16,22 @@
   display: inline-block;
   float: none;
   vertical-align: top;
+  font-family: 'Lobster', cursive;
+  font-size: 120%;
 }
 
 .navbar{
   padding: 10px;
-  margin-bottom: 0px;
 }
 
 .navbar-collapse {
   padding-left: 140px;
 }
 
-.icon{
-  padding: 23px 28px 24px 0;
-  margin: -10px 15px 0 0;
-}
-
 #logo{
     position: absolute;
     left: 2%;
-    top: 7px;
+    top: 11px;
     display: block;
 }
 /*Navigatie menu*/
@@ -105,6 +101,10 @@
   background-color: white;
 }
 
+.titleTekst{
+    font-family: 'Lobster', cursive;
+}
+
 .tekst{
   font-size: 125%;
 }
@@ -143,6 +143,13 @@
 }
 
 .siteMap{
-    
+    padding-left: 15px;
 }
 /*Footer*/
+
+
+@media(max-width:767px) {
+  .tekstCenter {
+    text-align: center;
+  }
+}
