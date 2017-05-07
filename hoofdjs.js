@@ -17,6 +17,11 @@ function nextSlide() {
 $(document).ready(function(){
     if($(window).width() < 767 || $(window).width === 767){
         document.getElementById("navbar").style.paddingLeft = "0px";
+        document.getElementById("Foto1").style.marginLeft = "0px";
+        document.getElementById("Foto3").style.marginLeft = "0px";
+        document.getElementById("Foto1").style.boxShadow = "0px 0px 0px";
+        document.getElementById("Foto2visxl").style.boxShadow = "0px 0px 0px";
+        document.getElementById("Foto3").style.boxShadow = "0px 0px 0px";
       }
 });
 //als je het scherm aanpast in grootte dan bij een bepaalde afstand de css
@@ -24,9 +29,19 @@ $(document).ready(function(){
 $( window ).resize(function(){
     if($(window).width() < 767 || $(window).width === 767){
         document.getElementById("navbar").style.paddingLeft = "0px";
+        document.getElementById("Foto1").style.marginLeft = "0px";
+        document.getElementById("Foto3").style.marginLeft = "0px";
+        document.getElementById("Foto1").style.boxShadow = "0px 0px 0px";
+        document.getElementById("Foto2visxl").style.boxShadow = "0px 0px 0px";
+        document.getElementById("Foto3").style.boxShadow = "0px 0px 0px";
     }
     else{
         document.getElementById("navbar").style.paddingLeft = "140px";
+        document.getElementById("Foto1").style.marginLeft = "75px";
+        document.getElementById("Foto3").style.marginLeft = "75px";
+        document.getElementById("Foto1").style.boxShadow = "10px 10px 5px grey";
+        document.getElementById("Foto2visxl").style.boxShadow = "-10px 10px 5px grey";
+        document.getElementById("Foto3").style.boxShadow = "10px 10px 5px grey";
     }
 });
 
