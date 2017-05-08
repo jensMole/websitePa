@@ -45,18 +45,30 @@ $( window ).resize(function(){
     }
 });
 
-//nav
+//if($(window).width() <1300 && $(window).width() >1100){
+//    document.getElementById("tekst1").style.marginTop = "140px";
+//    document.getElementById("tekst2").style.marginTop = "140px";
+//    document.getElementById("tekst3").style.marginTop = "140px";
+//}else if($(window).width() <1100 && $(window).width() >950){
+//    document.getElementById("tekst1").style.marginTop = "100px";
+//    document.getElementById("tekst2").style.marginTop = "100px";
+//    document.getElementById("tekst3").style.marginTop = "100px";
+//}else if($(window).width() <950 && $(window).width() >767){
+//    document.getElementById("tekst1").style.marginTop = "30px";
+//    document.getElementById("tekst2").style.marginTop = "30px";
+//    document.getElementById("tekst3").style.marginTop = "30px";
+//}
 
 
-////voor de afstand te verkijgen op het starten van de site.
+//voor de afstand te verkijgen op het starten van de site.
 //$(document).ready(function(){
-//  var img = document.getElementsByClassName('test');
+//  var tekst = document.getElementsByClassName('teksten');
 //
-//    for(var foto of img){
+//    for(var tekstHoogte of tekst){
 //
-//      var hoogte = foto.clientHeight;
+//      var hoogte = tekstHoogte.clientHeight;
 //
-//      var element = document.getElementsByClassName('slideheight');
+//      var element = document.getElementsByClassName('projectTekst');
 //      element.style.height = hoogte + "px";
 //      console.log(element.style.height);
 //    }
