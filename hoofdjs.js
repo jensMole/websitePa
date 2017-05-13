@@ -20,19 +20,19 @@ $(document).ready(function(){
         document.getElementById("Foto1").style.marginLeft = "0px";
         document.getElementById("Foto3").style.marginLeft = "0px";
         document.getElementById("Foto1").style.boxShadow = "0px 0px 0px";
-        document.getElementById("Foto2visxl").style.boxShadow = "0px 0px 0px";
         document.getElementById("Foto3").style.boxShadow = "0px 0px 0px";
       }
 });
+
 //als je het scherm aanpast in grootte dan bij een bepaalde afstand de css
-//aanpassen.
+//aanpassen. Dit is voor de margin van de foto's, de padding van de navigatie
+//en ook voor de shadow op de foto's aan en uit te zetten.
 $( window ).resize(function(){
     if($(window).width() < 767 || $(window).width === 767){
         document.getElementById("navbar").style.paddingLeft = "0px";
         document.getElementById("Foto1").style.marginLeft = "0px";
         document.getElementById("Foto3").style.marginLeft = "0px";
         document.getElementById("Foto1").style.boxShadow = "0px 0px 0px";
-        document.getElementById("Foto2visxl").style.boxShadow = "0px 0px 0px";
         document.getElementById("Foto3").style.boxShadow = "0px 0px 0px";
     }
     else{
@@ -40,50 +40,108 @@ $( window ).resize(function(){
         document.getElementById("Foto1").style.marginLeft = "75px";
         document.getElementById("Foto3").style.marginLeft = "75px";
         document.getElementById("Foto1").style.boxShadow = "10px 10px 5px grey";
-        document.getElementById("Foto2visxl").style.boxShadow = "-10px 10px 5px grey";
         document.getElementById("Foto3").style.boxShadow = "10px 10px 5px grey";
     }
 });
 
-//if($(window).width() <1300 && $(window).width() >1100){
-//    document.getElementById("tekst1").style.marginTop = "140px";
-//    document.getElementById("tekst2").style.marginTop = "140px";
-//    document.getElementById("tekst3").style.marginTop = "140px";
-//}else if($(window).width() <1100 && $(window).width() >950){
-//    document.getElementById("tekst1").style.marginTop = "100px";
-//    document.getElementById("tekst2").style.marginTop = "100px";
-//    document.getElementById("tekst3").style.marginTop = "100px";
-//}else if($(window).width() <950 && $(window).width() >767){
-//    document.getElementById("tekst1").style.marginTop = "30px";
-//    document.getElementById("tekst2").style.marginTop = "30px";
-//    document.getElementById("tekst3").style.marginTop = "30px";
-//}
+//als het document klaar is gaan we gaan kijken voor de positie van de tekst.
+//Deze wordt auto bepaald. Proberen in het midden te plaatsen.
+$(document).ready(function(){
+    if($(window).width() <1500 && $(window).width() > 991 || $(window).width() === 991){
+    
+        var projecten = document.getElementsByClassName('fotoProjecten');
 
+        for(var project of projecten){
 
-//voor de afstand te verkijgen op het starten van de site.
-//$(document).ready(function(){
-//  var tekst = document.getElementsByClassName('teksten');
-//
-//    for(var tekstHoogte of tekst){
-//
-//      var hoogte = tekstHoogte.clientHeight;
-//
-//      var element = document.getElementsByClassName('projectTekst');
-//      element.style.height = hoogte + "px";
-//      console.log(element.style.height);
-//    }
-//});
-//
-//// Krijg grootte van de fotos eenmaal als het scherm verkleind.
-//$( window ).resize(function(){
-//  var img = document.getElementsByClassName('test');
-//
-//  for(var foto of img){
-//
-//    var hoogte = foto.clientHeight;
-//
-//    var element = document.getElementsByClassName('slideheight');
-//    element.style.height = hoogte + 10 + "px";
-//    console.log(element.style.height);
-//  }
-//});
+          var hoogte = project.clientHeight;
+
+          console.log(hoogte);
+
+          var element = document.getElementById('tekst1');
+          element.style.marginTop = hoogte - 300 + "px";
+          var element = document.getElementById('tekst2');
+          element.style.marginTop = hoogte - 300 + "px";
+          var element = document.getElementById('tekst3');
+          element.style.marginTop = hoogte - 300 + "px";
+        }
+    }else if($(window).width() > 1500 || $(window).width() === 1500){
+        
+          var element = document.getElementById('tekst1');
+          element.style.marginTop = 200 + "px";
+          var element = document.getElementById('tekst2');
+          element.style.marginTop = 200 + "px";
+          var element = document.getElementById('tekst3');
+          element.style.marginTop = 200 + "px";    
+    }else if($(window).width() < 991 && $(window).width() > 767 || $(window).width() === 767){
+          var element = document.getElementById('tekst1');
+          element.style.marginTop = 20 + "px";
+          var element = document.getElementById('tekst2');
+          element.style.marginTop = 20 + "px";
+          var element = document.getElementById('tekst3');
+          element.style.marginTop = 20 + "px";
+    }
+});
+
+//als je de scherm resolutie aanpast dan gaan we de afstand van de tekst gaan
+//beinvloeden (test doeleinde + liggend scherm GSM/tablet).
+$( window ).resize(function(){
+    
+    if($(window).width() <1500 && $(window).width() > 991 || $(window).width() === 991){
+    
+        var projecten = document.getElementsByClassName('fotoProjecten');
+
+        for(var project of projecten){
+
+          var hoogte = project.clientHeight;
+
+          var element = document.getElementById('tekst1');
+          element.style.marginTop = hoogte - 300 + "px";
+          var element = document.getElementById('tekst2');
+          element.style.marginTop = hoogte - 300 + "px";
+          var element = document.getElementById('tekst3');
+          element.style.marginTop = hoogte - 300 + "px";
+        }
+    }
+    else if($(window).width() > 1500 || $(window).width() === 1500){
+          var element = document.getElementById('tekst1');
+          element.style.marginTop = 200 + "px";
+          var element = document.getElementById('tekst2');
+          element.style.marginTop = 200 + "px";
+          var element = document.getElementById('tekst3');
+          element.style.marginTop = 200 + "px";
+    }
+    else if($(window).width() < 991 && $(window).width() > 767 || $(window).width() === 767){
+        var element = document.getElementById('tekst1');
+          element.style.marginTop = 20 + "px";
+          var element = document.getElementById('tekst2');
+          element.style.marginTop = 20 + "px";
+          var element = document.getElementById('tekst3');
+          element.style.marginTop = 20 + "px";
+    }
+});
+
+//Foto's centreren eenmaal als scherm kleiner is dan 991 pixels.
+$(document).ready(function(){
+    if($(window).width() < 991){
+          var element = document.getElementById('Foto1');
+          element.style.margin = "auto";
+          var element = document.getElementById('Foto2');
+          element.style.margin = "auto";
+          var element = document.getElementById('Foto3');
+          element.style.margin = "auto";
+    }
+});
+
+//Foto's centreren eenmaal als scherm kleiner is dan 991 pixels. (Voor tablets + GSM)
+//als de resolutie zich aanpast.
+$( window ).resize(function(){
+    if($(window).width() < 991){
+          var element = document.getElementById('Foto1');
+          element.style.margin = "auto";
+          var element = document.getElementById('Foto2');
+          element.style.margin = "auto";
+          var element = document.getElementById('Foto3');
+          element.style.margin = "auto";
+          
+    }
+});

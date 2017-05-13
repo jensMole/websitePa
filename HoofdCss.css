@@ -1,3 +1,7 @@
+body{
+    overflow-x: hidden;
+}
+
 /*Navigatie menu*/
 .nav.navbar-nav li a {
     color: black;
@@ -109,6 +113,10 @@
 .tekst{
   font-size: 125%;
 }
+
+.nieuws{
+ color: darkblue;
+}
 /*tekst intro*/
 
 
@@ -131,10 +139,25 @@
     max-height: 555px;
 }
 
+.Projects img{
+    cursor: pointer;
+}
+
 .projectTekst{
     margin-left: 60px;
-    margin-top: 200px;
+    margin-right: 10px;
     text-align: left;
+}
+
+.fade {
+   opacity: 0.9;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
+.fade:hover {
+   opacity: 1;
 }
 
 #EndFoto{
@@ -182,7 +205,8 @@
 /*Footer*/
 
 
-@media(max-width:767px) {
+/* Als het scherm kleiner is dan 991 pixels doen we aanpassingen */
+@media(max-width:991px) {
   .tekstCenter {
     text-align: center;
   }
@@ -190,7 +214,6 @@
   .projectTekst{
       margin-left: 10px;
       margin-top: 0px;
-  }
-  
+  }  
 }
 
