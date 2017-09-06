@@ -70,7 +70,7 @@ body{
     transition: opacity 1s;
 }
 
-#slide1, #slide2{
+#slide1, #slide2, #slide3{
     position: absolute;
     top: 0px;
 }
@@ -121,6 +121,10 @@ body{
 
 
 /* Projecten */
+.projectTitel{
+    text-align: center;
+}
+
 #Foto1{
     margin-left: 75px;
     box-shadow: 10px 10px 5px grey;
@@ -139,14 +143,15 @@ body{
     max-height: 555px;
 }
 
-.Projects img{
+/*.Projects img{
     cursor: pointer;
-}
+}*/
 
 .projectTekst{
     margin-left: 60px;
-    margin-right: 10px;
-    text-align: left;
+    /*margin-right: 30px;*/
+    text-align: center;
+    font-size: 150%;
 }
 
 .fade {
@@ -202,6 +207,19 @@ body{
 .siteMap{
     padding-left: 15px;
 }
+
+.titleWebDesign a{
+    text-decoration: none;
+    color: #bdc3c7;
+}
+
+.titleWebDesign a:hover{
+    color: white;
+}
+
+.license{
+    padding-left: 25px;
+}
 /*Footer*/
 
 
@@ -215,5 +233,8 @@ body{
       margin-left: 10px;
       margin-top: 0px;
   }  
+  
+  .license{
+    padding-left: 0px;
+  }
 }
-
