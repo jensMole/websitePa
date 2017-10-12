@@ -7,9 +7,9 @@
 			."Mobiel nummer: " .$_POST["mobielNummer"] . "\n"
 			."Bericht: " .$_POST["bericht"];
 
-		$send_contact = mail("jensmolenaers@hotmail.com", "TEST", $msg);
+		$send_contact = mail("bouwwerken@bmronny.be", "Mail Contact", $msg);
 
-		header("location: contact.php");
+		header("location: bedankt.html");
 
 	}else{
 		header("location: contact.php");

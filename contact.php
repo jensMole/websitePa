@@ -37,7 +37,7 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="index.html">Home</a></li>
-            <li><a href="binnenkort.html">Info</a></li>
+            <!--<li><a href="binnenkort.html">Info</a></li>-->
             <li><a href="binnenkort.html">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -48,51 +48,57 @@
     
     <!-- Naam, Email, Telefoon/gsm nummer, Bericht -->
     <section id="contactInfo">   
-      <form action="contact-us-send.php" method="post">   
-        <table>
+      <form action="contact-us-send.php" method="post"> 
+       <div id="info" class="container">
+        <div class="row">  
+          <div class="col-sm-7">
+            <table id="dataContact">
+              <tr>
+                <td><label for="naam">Naam:</label></td>
+              </tr>
+              <tr>
+                <td><input class="afstand" type="text" name="naam" id="naam" size="30" required="required" placeholder="Naam invoeren"/></td>
+              </tr>
 
-          <tr>
-            <td><label for="naam">Naam:</label></td>
-          </tr>
-          <tr>
-            <td><input type="text" name="naam" id="naam" size="40" required="required" /></td>
-          </tr>
+              <tr>
+                <td><label for="email">E-mailadres:</label></td>
+              </tr>
+              <tr>
+                <td><input class="afstand" type="email" name="email" id="email" size="30" required="required" placeholder="E-mailadres invoeren" /></td>
+              </tr>
 
-          <tr>
-            <td><label for="email">Email:</label></td>
-          </tr>
-          <tr>
-            <td><input type="email" name="email" id="email" size="40" required="required" /></td>
-          </tr>
+              <tr>
+                <td><label for="telefoonNummer">Telefoon:</label></td>
+              </tr>
+              <tr>
+                <td><input class="afstand" type="text" name="telefoonNummer" id="telefoonNummer" size="30" placeholder="Telefoonnummer invoeren"/></td>
+              </tr>
 
-          <tr>
-            <td><label for="telefoonNummer">Telefoon:</label></td>
-          </tr>
-          <tr>
-            <td><input type="text" name="telefoonNummer" id="telefoonNummer" size="40"/></td>
-          </tr>
-
-          <tr>
-            <td><label for="mobielNummer">Mobiel:</label></td>
-          </tr>
-          <tr>
-            <td><input type="text" name="mobielNummer" id="mobielNummer" size="40"/></td>
-          </tr>
-        </table>
-        
-        <table id="berichtTable"><!-- TODO -->
-          <tr>
-            <td rowspan="4"><label for="bericht">Bericht:</label></td>
-          </tr>
-          <tr>
-            <td rowspan="4"><textarea name="bericht" id="bericht" rows="4" cols="50" required></textarea></td>
-          </tr>
-        </table>
-
-        <p>
-          <input type="submit" name="submit" value="Verstuur"/>
-        </p>
-
+              <tr>
+                <td><label for="mobielNummer">Mobiel:</label></td>
+              </tr>
+              <tr>
+                <td><input class="afstand" type="text" name="mobielNummer" id="mobielNummer" size="30" placeholder="Mobiel nummer invoeren" /></td>
+              </tr>
+            </table>
+          </div>
+          <div class="col-sm-5">
+            <table id="berichtTable">
+              <tr>
+                <td><label for="bericht">Bericht:</label></td>
+              </tr>
+              <tr>
+                <td><textarea name="bericht" id="bericht" rows="9" cols="30" required placeholder="Bericht invoeren"></textarea></td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="submit" name="submit" value="Verzenden"/>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+       </div>
       </form>
     </section>
 
@@ -119,7 +125,7 @@
                </h6>
                 <ul class="linkenfoot">
                    <li><a href="index.html">HOME</a></li>
-                   <li><a href="binnenkort.html">OVER ONS</a></li>
+                   <li><a href="contact.php">CONTACT</a></li>
                 </ul>
             </div>
           </div>

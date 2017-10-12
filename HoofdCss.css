@@ -1,241 +1,496 @@
-body{
-    overflow-x: hidden;
-}
-
-/*Navigatie menu*/
-.nav.navbar-nav li a {
-    color: black;
-}
-.active a{
-    color: black !important;
-}
-.navbar-default li{
-    list-style-type: none;
-    font-size: 130%;
-}
-.navbar-default{
-    background-color: white;
-}
-.navbar .navbar-nav {
-  display: inline-block;
-  float: none;
-  vertical-align: top;
-  font-family: 'Lobster', cursive;
-  font-size: 120%;
-}
-
-.navbar{
-  padding: 10px;
-   margin-bottom: 0px;
-}
-
-.navbar-collapse {
-  padding-left: 140px;
-}
-
-#logo{
-    position: absolute;
-    left: 2%;
-    top: 11px;
-    display: block;
-}
-/*Navigatie menu*/
-
-
-/*slideshow*/
-#slides {
-    position: relative;
-    padding: 0px;
-    margin: 0px;
-    list-style-type: none;
-}
-
-.slideheight{
-    max-width: 100%;
-    max-height: 450px;
-}
-
-.slide {
-    position:relative;
-    left: 0px;
-    top: 0px;
-    opacity: 0;
-    z-index: 1;
-    right: 0;
-    bottom: 0;
-
-    -webkit-transition: opacity 1s;
-    -moz-transition: opacity 1s;
-    -o-transition: opacity 1s;
-    transition: opacity 1s;
-}
-
-#slide1, #slide2, #slide3{
-    position: absolute;
-    top: 0px;
-}
-
-.showing {
-    opacity: 1;
-    z-index: 2;
-}
-
-#fotobackground{
-  background-color: #F5F5F5;
-  text-align: center;
-}
-/*slideshow*/
-
-/*tekst intro*/
-/*rode beginletters*/
-.rodeLetters{
-  text-align: center;
-}
-
-.rodeLetters span{
-  color:red;
-}
-
-/*tekst in het midden plaatsen*/
-#info{
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-#tekst{
-  background-color: white;
-}
-
-.titleTekst{
-    font-family: 'Lobster', cursive;
-}
-
-.tekst{
-  font-size: 125%;
-}
-
-.nieuws{
- color: darkblue;
-}
-/*tekst intro*/
-
-
-/* Projecten */
-.projectTitel{
-    text-align: center;
-}
-
-#Foto1{
-    margin-left: 75px;
-    box-shadow: 10px 10px 5px grey;
-}
-
-#Foto2{
-    box-shadow: -10px 10px 5px grey;
-}
-
-#Foto3{
-    margin-left: 75px;
-    box-shadow: 10px 10px 5px grey;
-}
-
-.Projects{
-    max-height: 555px;
-}
-
-/*.Projects img{
-    cursor: pointer;
-}*/
-
-.projectTekst{
-    margin-left: 60px;
-    /*margin-right: 30px;*/
-    text-align: center;
-    font-size: 150%;
-}
-
-.fade {
-   opacity: 0.9;
-   transition: opacity .25s ease-in-out;
-   -moz-transition: opacity .25s ease-in-out;
-   -webkit-transition: opacity .25s ease-in-out;
-}
-
-.fade:hover {
-   opacity: 1;
-}
-
-#EndFoto{
-    margin-bottom: -100px;
-}
-
-#projecten div{
-    padding-bottom: 80px;
-}
-/* Projecten */
-
-
-/*Footer*/
-#footkleur{
-  background-color:#074b81;
-  padding: 50px;
-}
-
-.footTitel{
-  font-size: 28px;
-  /* 28px */
-  line-height: 1.4642745;
-  /* 41px */
-  font-weight: 300;
-  margin-bottom: 20px;
-  color: #ffffff;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-.tekstFoot{
-  color: #bdc3c7;
-}
-
-.linkenfoot{
-  list-style-type: none;
-}
-
-.linkenfoot a {
-  color: #bdc3c7;
-}
-
-.siteMap{
-    padding-left: 15px;
-}
-
-.titleWebDesign a{
-    text-decoration: none;
-    color: #bdc3c7;
-}
-
-.titleWebDesign a:hover{
-    color: white;
-}
-
-.license{
-    padding-left: 25px;
-}
-/*Footer*/
-
-
-/* Als het scherm kleiner is dan 991 pixels doen we aanpassingen */
-@media(max-width:991px) {
-  .tekstCenter {
-    text-align: center;
-  }
-  
-  .projectTekst{
-      margin-left: 10px;
-      margin-top: 0px;
-  }  
-  
-  .license{
-    padding-left: 0px;
-  }
-}
-
+body{
+    overflow-x: hidden;
+}
+
+
+
+/*Navigatie menu*/
+
+.nav.navbar-nav li a {
+    color: black;
+}
+
+.active a{
+    color: black !important;
+}
+
+.navbar-default li{
+    list-style-type: none;
+    font-size: 130%;
+}
+
+.navbar-default{
+    background-color: white;
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+  font-family: 'Lobster', cursive;
+  font-size: 120%;
+}
+
+
+
+.navbar{
+  padding: 10px;
+   margin-bottom: 0px;
+}
+
+
+
+.navbar-collapse {
+  padding-left: 140px;
+}
+
+
+
+#logo{
+    position: absolute;
+    left: 2%;
+    top: 11px;
+    display: block;
+}
+
+/*Navigatie menu*/
+
+
+
+
+
+/*slideshow*/
+
+#slides {
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+
+
+.slideheight{
+    max-width: 100%;
+    max-height: 450px;
+}
+
+
+
+.slide {
+    position:relative;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+
+
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+
+
+#slide1, #slide2, #slide3{
+    position: absolute;
+    top: 0px;
+}
+
+
+
+.showing {
+    opacity: 1;
+    z-index: 2;
+}
+
+
+
+#fotobackground{
+  background-color: #F5F5F5;
+
+  text-align: center;
+
+}
+
+/*slideshow*/
+
+
+
+/*tekst intro*/
+
+/*rode beginletters*/
+
+.rodeLetters{
+
+  text-align: center;
+
+}
+
+
+
+.rodeLetters span{
+
+  color:red;
+
+}
+
+
+
+/*tekst in het midden plaatsen*/
+
+#info{
+
+  padding-top: 20px;
+
+  padding-bottom: 20px;
+
+}
+
+
+
+#tekst{
+
+  background-color: white;
+
+}
+
+
+
+.titleTekst{
+
+    font-family: 'Lobster', cursive;
+
+}
+
+
+
+.tekst{
+
+  font-size: 125%;
+
+}
+
+
+
+.nieuws{
+
+ color: darkblue;
+
+}
+
+/*tekst intro*/
+
+
+
+
+
+/* Projecten */
+
+.projectTitel{
+
+    text-align: center;
+
+}
+
+
+
+#Foto1{
+
+    margin-left: 75px;
+
+    box-shadow: 10px 10px 5px grey;
+
+}
+
+
+
+#Foto2{
+
+    box-shadow: -10px 10px 5px grey;
+
+}
+
+
+
+#Foto3{
+
+    margin-left: 75px;
+
+    box-shadow: 10px 10px 5px grey;
+
+}
+
+
+
+.Projects{
+
+    max-height: 555px;
+
+}
+
+
+
+/*.Projects img{
+
+    cursor: pointer;
+
+}*/
+
+
+
+.projectTekst{
+
+    margin-left: 60px;
+
+    /*margin-right: 30px;*/
+
+    text-align: center;
+
+    font-size: 150%;
+
+}
+
+
+
+.fade {
+
+   opacity: 0.9;
+
+   transition: opacity .25s ease-in-out;
+
+   -moz-transition: opacity .25s ease-in-out;
+
+   -webkit-transition: opacity .25s ease-in-out;
+
+}
+
+
+
+.fade:hover {
+
+   opacity: 1;
+
+}
+
+
+
+#EndFoto{
+
+    margin-bottom: -100px;
+
+}
+
+
+
+#projecten div{
+
+    padding-bottom: 80px;
+
+}
+
+/* Projecten */
+
+#contactInfo{
+  padding-left: 100px;
+  background-color: #f5f5f5;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+#dataContact{
+  margin: auto;
+}
+
+.afstand{
+    margin-bottom: 15px;
+}
+
+#berichtTable{
+  margin-left: -80px;
+}
+
+input[type="text"], input[type="email"], textarea{
+  background-color: #fcfcfc;
+  resize: none;
+  font-size: 18px;
+}
+
+input[type="submit"]{
+  background-color: white;
+  border-radius: 10%;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: black;
+    font-style: italic; 
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: black;
+   opacity:  1;
+   font-style: italic; 
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: black;
+   opacity:  1;
+   font-style: italic; 
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: black;
+   font-style: italic; 
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color: black;
+   font-style: italic; 
+}
+
+
+@media(max-width:767px) {
+
+  #berichtTable{
+    margin: auto;
+  }
+
+  #contactInfo{
+    padding-left: 0px;
+  }
+
+}
+
+#berichtOnvangen{
+  text-align: center;
+  padding: 50px;
+}
+
+
+/*Footer*/
+
+#footkleur{
+
+  background-color:#074b81;
+
+  padding: 50px;
+
+}
+
+
+
+.footTitel{
+
+  font-size: 28px;
+
+  /* 28px */
+
+  line-height: 1.4642745;
+
+  /* 41px */
+
+  font-weight: 300;
+
+  margin-bottom: 20px;
+
+  color: #ffffff;
+
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+
+
+.tekstFoot{
+
+  color: #bdc3c7;
+
+}
+
+
+
+.linkenfoot{
+
+  list-style-type: none;
+
+}
+
+
+
+.linkenfoot a {
+
+  color: #bdc3c7;
+
+}
+
+
+
+.siteMap{
+
+    padding-left: 15px;
+
+}
+
+
+
+.titleWebDesign a{
+
+    text-decoration: none;
+
+    color: #bdc3c7;
+
+}
+
+
+
+.titleWebDesign a:hover{
+
+    color: white;
+
+}
+
+
+
+.license{
+
+    padding-left: 25px;
+
+}
+
+/*Footer*/
+
+
+
+
+
+/* Als het scherm kleiner is dan 991 pixels doen we aanpassingen */
+
+@media(max-width:991px) {
+
+  .tekstCenter {
+
+    text-align: center;
+
+  }
+
+  
+
+  .projectTekst{
+
+      margin-left: 10px;
+
+      margin-top: 0px;
+
+  }  
+
+  
+
+  .license{
+
+    padding-left: 0px;
+
+  }
+
+}
+
+
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <title>
+      Ontvangen
+    </title>
+    <link rel="shortcut icon" href="afbeeldingen/bmr.png"/>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  	<meta name="description" content="Welkom bij BMR. Bouwerken Molenaers Ronald zorgt voor het bouwen van jouw huis." />
+  	<meta name="keywords" content="Bouw, Construction" />
+  	<meta name="author" content="Jens M." />
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- css file -->
+    <link href="HoofdCss.css" type="text/css" rel="stylesheet"/>
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+  </head>
+  <body>
+
+    <!-- Navigatie -->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="icon navbar-brand" href="index.html"><img id="logo" src="afbeeldingen/bmrsmall.png" alt="afbeelding"></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+        </div><!--/.nav-collapse -->
+      </div><!--/.container-fluid -->
+    </nav>
+    <!-- Navigatie -->
+
+    
+    <h4 id="berichtOnvangen">U bericht is goed ontvangen. U wordt terug gebracht naar de home pagina binnen 5 seconden.<br/>
+    	Als je niet wordt terug gestuurd <a href="index.html">Klik hier</a>.</h4>
+
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+        	var delay = 4000; 
+			setTimeout(function(){ window.location = "index.html"; }, delay);
+        </script>
+        <!--<script src="hoofdjs.js"></script>-->
+  </body>
+</html>
