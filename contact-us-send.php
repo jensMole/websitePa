@@ -18,18 +18,18 @@
 				Hallo Meneer Ronald, Mevrouw Waghemans<br>
 				</p>
 				<p>
-				Er is een mail aangekomen van NAAM met als bericht:<br>
-				BERICHT
+				Er is een mail aangekomen van '.$_POST["naam"] .' met als bericht:<br>
+				'.$_POST["bericht"].'
 				</p>
 
 				<p id="info">
-					E-mailadres van NAAM: EMAILADRES.<br>
-					De telefoon- en/of mobiel-nummer van NAAM: Telefoon: TELEFOON, mobiel: MOBIEL.
+					E-mailadres van '.$_POST["naam"] .': '.$_POST["email"] .'.<br>
+					De telefoon- en/of mobiel-nummer van '.$_POST["naam"] .': Telefoon: '.$_POST["telefoonNummer"] .', mobiel: '.$_POST["mobielNummer"] .'.
 				</p>
 
 				<p id="footer">
 					Met vriendelijke groeten,<br>
-					NAAM.
+					'.$_POST["naam"] .'.
 				</p>
 
 				<p id="copy" style="font-size: 70%;text-align: center;">
@@ -40,7 +40,10 @@
 	</body>
 </html>';
 
-		mail("bouwwerken@bmronny.be", "Mail Contact", $msg);
+$headers = "MIME-Version: 1.0\n" ;
+$headers .= "Content-Type: text/html; charset=\"iso-8859-1\"\n";
+
+		mail("bouwwerken@bmronny.be", "Mail Contact", $msg, $headers);
 
 		header("location: bedankt.html");
 
