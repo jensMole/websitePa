@@ -1,7 +1,4 @@
-<?php
-	if(isset($_POST['submit'])){
-
-		$msg = '<!DOCTYPE html>
+<!DOCTYPE html>
 	<html>
 	<head>
 		<title></title>
@@ -38,14 +35,4 @@
 			</div>       	
 		</div>
 	</body>
-</html>';
-
-		mail("bouwwerken@bmronny.be", "Mail Contact", $msg);
-
-		header("location: bedankt.html");
-
-	}else{
-		header("location: contact.php");
-		exit();
-	}
-?>
+</html>
