@@ -1,0 +1,30 @@
+body{
+	background-color: #b3b5b7;
+
+}
+
+#mail{
+	width: 770px;
+	margin: auto;
+	background-color: white;
+	border-radius: 15%;
+}
+
+#logo{
+	background-color: #37393a;
+	border-radius: 10%;
+}
+
+#logoafbeelding{
+	margin-left: 20px;
+}
+
+.rodeLetters{
+  text-align: center;
+}
+
+
+
+.rodeLetters span{
+  color:red;
+}
