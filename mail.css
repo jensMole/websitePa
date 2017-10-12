@@ -23,8 +23,21 @@ body{
   text-align: center;
 }
 
-
-
 .rodeLetters span{
   color:red;
+}
+
+#gegevens{
+	padding: 10px;
+	margin-left: 10px;
+}
+
+#bericht{
+	font-size: 120%;
+	font-weight: bold;
+}
+
+#copy{
+	font-size: 70%;
+	text-align: center;
 }
